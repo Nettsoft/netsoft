@@ -1,33 +1,89 @@
-# Welcome to your Lovable project
+# Net-soft Communications Website
 
-## Project info
+Official website for Net-soft Communications - Independent third-party cable, internet, and streaming assistance platform.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🚀 Deployment
 
-## How can I edit this code?
+This website is automatically deployed to GitHub Pages using GitHub Actions.
 
-There are several ways of editing your application.
+### Automatic Deployment
+- **URL**: https://netsoftcommunication.com
+- **Triggers**: Every push to the `main` branch automatically deploys the latest version
+- **Platform**: GitHub Pages with custom domain
 
-**Use Lovable**
+### Manual Deployment
+To manually trigger a deployment:
+1. Go to the "Actions" tab in GitHub
+2. Select "Deploy to GitHub Pages" workflow
+3. Click "Run workflow"
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🛠️ Development
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
+- Node.js 20 or higher
+- npm
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
+### Installation
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+npm install
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Development Server
+```sh
+npm run dev
+```
+The site will be available at http://localhost:8080
+
+### Build for Production
+```sh
+npm run build
+```
+
+### Preview Production Build
+```sh
+npm run preview
+```
+
+## 📦 Tech Stack
+- **Framework**: React 18 + Vite
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS + shadcn/ui
+- **Animation**: Framer Motion
+- **Routing**: React Router v6
+
+## 🌐 Custom Domain Setup
+
+The website is configured for the custom domain `netsoftcommunication.com`:
+
+1. **CNAME Record**: A CNAME file is included in `/public/CNAME`
+2. **DNS Configuration**: Ensure your domain's DNS has these records:
+   - CNAME: `www` → `nettsoft.github.io`
+   - A Records for apex domain:
+     - `185.199.108.153`
+     - `185.199.109.153`
+     - `185.199.110.153`
+     - `185.199.111.153`
+
+## 📝 Making Changes
+
+1. Make your changes locally
+2. Commit and push to the `main` branch:
+   ```sh
+   git add .
+   git commit -m "Your change description"
+   git push origin main
+   ```
+3. GitHub Actions will automatically build and deploy your changes
+4. Changes will be live at https://netsoftcommunication.com in 2-3 minutes
+
+## 🎨 Brand Guidelines
+- **Brand Name**: Net-soft Communications
+- **Primary Colors**: Blue (#0EA5E9) to Purple (#8B5CF6) gradient
+- **Phone**: 1-800-NETSOFT (1-800-638-7638)
+- **Email**: support@netsoftcomm.com
+
+## 📄 License
+All rights reserved © 2026 Net-soft Communications
 
 # Step 3: Install the necessary dependencies.
 npm i
