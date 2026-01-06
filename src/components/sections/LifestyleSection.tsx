@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Check, ArrowRight } from "lucide-react";
+import { Check, ArrowRight, Phone } from "lucide-react";
 import familyImage from "@/assets/family-watching-tv.jpg";
 
 const benefits = [
@@ -95,13 +95,13 @@ export default function LifestyleSection() {
             {/* CTA */}
             <div className="flex flex-wrap items-center gap-3 sm:gap-4">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/internet">
-                  Explore Services
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
+                <a href="tel:8444498598">
+                  <Phone className="w-5 h-5" />
+                  Call Now: (844) 449-8598
+                </a>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/contact">Talk to Sales</Link>
+                <a href="tel:8444498598">Call Now</a>
               </Button>
             </div>
           </motion.div>

@@ -136,10 +136,10 @@ export default function Navbar() {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <Button variant="ghost" size="sm" asChild>
-              <Link to="/contact">Support</Link>
+              <a href="tel:8444498598">Support</a>
             </Button>
             <Button variant="hero" size="default" asChild>
-              <Link to="/coverage">Check Availability</Link>
+              <a href="tel:8444498598">Call Now: (844) 449-8598</a>
             </Button>
           </div>
 
@@ -218,7 +218,7 @@ export default function Navbar() {
                 ))}
                 <div className="pt-4 px-4 space-y-2">
                   <Button variant="hero" className="w-full" asChild>
-                    <Link to="/coverage">Check Availability</Link>
+                    <a href="tel:8444498598">Call Now: (844) 449-8598</a>
                   </Button>
                 </div>
               </div>

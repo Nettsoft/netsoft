@@ -76,7 +76,7 @@ export default function StreamingPage() {
               </div>
 
               <Button variant="hero" asChild className="w-full sm:w-auto">
-                <Link to="/coverage">Get Streaming-Ready</Link>
+                <a href="tel:8444498598">Call Now: (844) 449-8598</a>
               </Button>
             </motion.div>
 

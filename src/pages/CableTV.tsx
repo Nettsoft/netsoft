@@ -212,7 +212,7 @@ export default function CableTVPage() {
                   className="w-full mt-auto"
                   asChild
                 >
-                  <Link to="/coverage">Get Started</Link>
+                  <a href="tel:8444498598">Call Now: (844) 449-8598</a>
                 </Button>
               </motion.div>
             ))}

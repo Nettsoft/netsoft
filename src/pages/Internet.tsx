@@ -158,7 +158,7 @@ export default function InternetPage() {
                 ))}
               </ul>
               <Button variant="hero" asChild>
-                <Link to="/coverage">Schedule Installation</Link>
+                <a href="tel:8444498598">Call Now: (844) 449-8598</a>
               </Button>
             </motion.div>
           </div>

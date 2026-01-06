@@ -47,10 +47,10 @@ export default function BannerSection() {
                 className="group shadow-lg"
                 asChild
               >
-                <Link to="/coverage">
-                  Claim Offer
+                <a href="tel:8444498598">
+                  Call Now: (844) 449-8598
                   <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </Link>
+                </a>
               </Button>
             </div>
           </div>

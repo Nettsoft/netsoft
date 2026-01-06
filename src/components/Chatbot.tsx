@@ -51,22 +51,22 @@ export default function Chatbot() {
 
       if (lowerText.includes("internet") || lowerText.includes("plan")) {
         botResponse =
-          "I can help you with internet plans! We offer guidance on various high-speed internet options. Would you like to speak with a specialist? Call us at 1-800-NETSOFT or visit our Internet page for more details.";
+          "I can help you with internet plans! We offer guidance on various high-speed internet options. Would you like to speak with a specialist? Call us at (844) 449-8598 or visit our Internet page for more details.";
       } else if (lowerText.includes("cable") || lowerText.includes("tv")) {
         botResponse =
-          "Looking for cable TV assistance? We provide support for HD, 4K, and streaming options. Contact us at 1-800-NETSOFT or check our Cable TV page for more information.";
+          "Looking for cable TV assistance? We provide support for HD, 4K, and streaming options. Contact us at (844) 449-8598 or check our Cable TV page for more information.";
       } else if (lowerText.includes("streaming")) {
         botResponse =
-          "We can help you with streaming services! Our team provides guidance on various streaming platforms. Call 1-800-NETSOFT or visit our Streaming page to learn more.";
+          "We can help you with streaming services! Our team provides guidance on various streaming platforms. Call (844) 449-8598 or visit our Streaming page to learn more.";
       } else if (lowerText.includes("coverage") || lowerText.includes("area")) {
         botResponse =
-          "To check service availability in your area, please visit our Coverage page or call us directly at 1-800-NETSOFT. We're available nationwide!";
+          "To check service availability in your area, please visit our Coverage page or call us directly at (844) 449-8598. We're available nationwide!";
       } else if (lowerText.includes("contact") || lowerText.includes("support")) {
         botResponse =
-          "You can reach us at:\n📞 Phone: 1-800-NETSOFT\n📧 Email: support@netsoftcomm.com\n\nWe're here to help 24/7!";
+          "You can reach us at:\n📞 Phone: (844) 449-8598\n📧 Email: support@netsoftcomm.com\n\nWe're here to help 24/7!";
       } else {
         botResponse =
-          "Thank you for your message! For immediate assistance, please call us at 1-800-NETSOFT or email support@netsoftcomm.com. Our team is ready to help!";
+          "Thank you for your message! For immediate assistance, please call us at (844) 449-8598 or email support@netsoftcomm.com. Our team is ready to help!";
       }
 
       const botMessage: Message = {
@@ -190,7 +190,7 @@ export default function Chatbot() {
               {/* Quick Contact */}
               <div className="flex items-center justify-center gap-4 mt-3">
                 <a
-                  href="tel:1-800-638-7638"
+                  href="tel:8444498598"
                   className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Phone className="w-3 h-3" />

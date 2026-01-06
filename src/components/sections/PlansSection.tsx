@@ -136,7 +136,7 @@ export default function PlansSection() {
                 className="w-full"
                 asChild
               >
-                <Link to="/coverage">Check Availability</Link>
+                <a href="tel:8444498598">Call Now: (844) 449-8598</a>
               </Button>
             </motion.div>
           ))}
@@ -154,10 +154,10 @@ export default function PlansSection() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4">
             <Button variant="outline" asChild>
-              <Link to="/internet">Compare All Plans</Link>
+              <a href="tel:8444498598">Call Now: (844) 449-8598</a>
             </Button>
             <Button variant="ghost" asChild>
-              <Link to="/contact">Talk to an Expert</Link>
+              <a href="tel:8444498598">Call Now</a>
             </Button>
           </div>
         </motion.div>

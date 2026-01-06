@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Wifi, Tv, Gauge, Shield, Zap } from "lucide-react";
+import { ArrowRight, Play, Wifi, Tv, Gauge, Shield, Zap, Phone } from "lucide-react";
 import heroRouter from "@/assets/hero-router.png";
 import heroTv from "@/assets/hero-tv.png";
 
@@ -49,16 +49,16 @@ export default function HeroSection() {
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center gap-4 mb-12">
               <Button variant="hero" size="xl" asChild>
-                <Link to="/coverage">
-                  Get Assistance
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
+                <a href="tel:8444498598">
+                  <Phone className="w-5 h-5" />
+                  Call Now: (844) 449-8598
+                </a>
               </Button>
               <Button variant="hero-outline" size="xl" asChild>
-                <Link to="/contact">
-                  <Play className="w-5 h-5" />
-                  Speak With Support
-                </Link>
+                <a href="tel:8444498598">
+                  <Phone className="w-5 h-5" />
+                  Call Now
+                </a>
               </Button>
             </div>
 

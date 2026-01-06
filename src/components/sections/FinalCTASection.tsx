@@ -24,17 +24,16 @@ export default function FinalCTASection() {
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-8 sm:mb-12">
             <Button variant="hero" size="xl" asChild>
-              <Link to="/coverage">
-                <MapPin className="w-5 h-5" />
-                Get Assistance
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+              <a href="tel:8444498598">
+                <Phone className="w-5 h-5" />
+                Call Now: (844) 449-8598
+              </a>
             </Button>
             <Button variant="hero-outline" size="xl" asChild>
-              <Link to="/contact">
+              <a href="tel:8444498598">
                 <Phone className="w-5 h-5" />
-                Request Help
-              </Link>
+                Call Now
+              </a>
             </Button>
           </div>
 

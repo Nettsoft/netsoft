@@ -16,7 +16,7 @@ export default function ContactPage() {
                 <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                 <div>
                   <h4 className="font-semibold text-xs sm:text-base text-foreground">Phone</h4>
-                  <p className="text-xs sm:text-sm text-muted-foreground">1-800-NETSOFT</p>
+                  <a href="tel:8444498598" className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors">(844) 449-8598</a>
                   <span className="block text-[10px] sm:text-xs text-accent mt-1">Call greeting: "Thank you for calling Net-soft Communications, an independent service assistance platform."</span>
                 </div>
               </div>

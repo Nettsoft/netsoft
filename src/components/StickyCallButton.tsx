@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function StickyCallButton() {
   const handleCall = () => {
-    window.location.href = "tel:1-800-638-7638";
+    window.location.href = "tel:8444498598";
   };
 
   return (
@@ -17,7 +17,7 @@ export default function StickyCallButton() {
     >
       <Phone className="w-6 h-6 text-white animate-pulse group-hover:animate-none" />
       <span className="absolute -top-12 right-0 bg-foreground text-background px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-        Call Us Now: 1-800-NETSOFT
+        Call Now: (844) 449-8598
       </span>
       {/* Ripple effect */}
       <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-20"></span>

@@ -98,7 +98,7 @@ export default function ServicesSlider() {
 
                   {/* CTA */}
                   <Button variant="outline" className="w-full" asChild>
-                    <Link to={service.href}>Learn More</Link>
+                    <a href="tel:8444498598">Call Now</a>
                   </Button>
                 </div>
               </div>

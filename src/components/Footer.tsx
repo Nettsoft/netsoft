@@ -57,7 +57,7 @@ export default function Footer() {
             <div className="space-y-2 sm:space-y-3">
               <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-background/70">
                 <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-primary-light" />
-                <span>1-800-STREAM-LINK</span>
+                <a href="tel:8444498598" className="hover:text-primary-light transition-colors">(844) 449-8598</a>
               </div>
               <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-background/70">
                 <Mail className="w-3 h-3 sm:w-4 sm:h-4 text-primary-light" />
