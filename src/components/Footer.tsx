@@ -33,6 +33,15 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="bg-foreground text-background">
+      {/* Compliance Disclaimer (Above Main Footer) */}
+      <div className="border-b border-background/10 bg-foreground/50">
+        <div className="container-wide px-2 sm:px-4 py-4 sm:py-6">
+          <p className="text-xs sm:text-sm text-background/80">
+            <strong>Disclaimer:</strong> Net-soft Communications is an independent third-party service assistance provider. We are not affiliated with, authorized by, or endorsed by any internet, broadband, or cable TV service provider. Brand names, if mentioned, are used strictly for informational purposes only.
+          </p>
+        </div>
+      </div>
+
       {/* Main Footer */}
       <div className="container-wide section-padding-sm px-2 sm:px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-10 lg:gap-12">
@@ -47,17 +56,14 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-background/70 mb-4 sm:mb-6 max-w-sm text-sm sm:text-base">
-              Net-soft Communications assists, guides, and supports you with cable, internet, and streaming services. We are not an ISP or provider, but an independent platform helping you navigate your options.<br />
-              <span className="block mt-2 text-xs text-background/60">
-                Net-soft Communications is an independent third-party service assistance startup. All trademarks, including provider names referenced descriptively (with ™ or ®), belong to their respective owners. We are not affiliated with, endorsed by, or sponsored by any cable, internet, or streaming service provider.
-              </span>
+              Net-soft Communications is an independent third-party service assistance provider offering general guidance related to internet, broadband, Wi-Fi, and cable TV services.
             </p>
             
-            {/* Contact Info */}
-            <div className="space-y-2 sm:space-y-3">
+            {/* Contact Info - VISIBLE */}
+            <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
               <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-background/70">
                 <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-primary-light" />
-                <a href="tel:8444498598" className="hover:text-primary-light transition-colors">(844) 449-8598</a>
+                <a href="tel:8444498598" className="hover:text-primary-light transition-colors font-semibold">(844) 449-8598</a>
               </div>
               <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-background/70">
                 <Mail className="w-3 h-3 sm:w-4 sm:h-4 text-primary-light" />
@@ -70,7 +76,7 @@ export default function Footer() {
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center gap-3 sm:gap-4 mt-4 sm:mt-6">
+            <div className="flex items-center gap-3 sm:gap-4">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
@@ -139,11 +145,10 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-background/10">
-        <div className="container-wide py-4 sm:py-6 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4">
+        <div className="container-wide py-4 sm:py-6 px-2 sm:px-4 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4">
           <p className="text-xs sm:text-sm text-background/60">
             © {new Date().getFullYear()} Net-soft Communications. All rights reserved.
           </p>
-          {/* Compliance disclosure moved above. Footer bar now simplified. */}
         </div>
       </div>
     </footer>

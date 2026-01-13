@@ -40,8 +40,13 @@ const speedTiers = [
 
 export default function InternetPage() {
   return (
-    <PageLayout title="Internet Services" description="Lightning-fast fiber internet for your home and business.">
-      {/* Features Grid */}
+    <PageLayout title="Internet Services Guidance" description="Independent third-party guidance on internet, broadband, and Wi-Fi service options.">
+      {/* Disclaimer Banner */}
+      <div className="w-full bg-accent/10 border-b border-accent text-accent text-center py-3 px-2 text-sm font-medium">
+        We provide informational guidance only. We are not an ISP and do not sell internet services directly.
+      </div>
+
+      {/* What to Look For in Internet Services */}
       <section className="section-padding bg-background">
         <div className="container-wide px-2 sm:px-4">
           <motion.div
@@ -51,15 +56,36 @@ export default function InternetPage() {
             className="text-center max-w-3xl mx-auto mb-8 sm:mb-16"
           >
             <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-medium mb-3 sm:mb-4">
-              Why Our Internet
+              Internet Guidance
             </span>
             <h2 className="text-2xl sm:text-4xl font-bold text-foreground mb-4 sm:mb-6">
-              Blazing Fast. <span className="text-gradient">Always Reliable.</span>
+              Understand Internet <span className="text-gradient">Service Options</span>
             </h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {internetFeatures.map((feature, index) => (
+            {[
+              {
+                icon: Zap,
+                title: "Speed Considerations",
+                description: "Understanding download/upload speeds and what they mean for your needs.",
+              },
+              {
+                icon: Shield,
+                title: "Data Policies",
+                description: "Learn about data caps, unlimited plans, and how to evaluate what's right.",
+              },
+              {
+                icon: Home,
+                title: "Connection Types",
+                description: "Fiber, cable, DSL, and satellite options explained in simple terms.",
+              },
+              {
+                icon: Video,
+                title: "Service Features",
+                description: "Compare WiFi quality, equipment, and customer support options.",
+              },
+            ].map((feature, index) => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -79,7 +105,7 @@ export default function InternetPage() {
         </div>
       </section>
 
-      {/* Speed Tiers */}
+      {/* Common Questions Section */}
       <section className="section-padding bg-secondary/30">
         <div className="container-wide px-2 sm:px-4">
           <motion.div
@@ -89,128 +115,41 @@ export default function InternetPage() {
             className="text-center max-w-3xl mx-auto mb-8 sm:mb-16"
           >
             <h2 className="text-2xl sm:text-4xl font-bold text-foreground mb-4 sm:mb-6">
-              Choose Your <span className="text-gradient">Speed</span>
+              Common Questions About <span className="text-gradient">Internet Services</span>
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {speedTiers.map((tier, index) => (
+          <div className="max-w-3xl mx-auto space-y-4 sm:space-y-6">
+            {[
+              {
+                q: "How much internet speed do I need?",
+                a: "It depends on your usage. Basic browsing needs 5-10 Mbps, streaming typically needs 25+ Mbps, and gaming or remote work often benefits from 100+ Mbps.",
+              },
+              {
+                q: "What's the difference between download and upload speeds?",
+                a: "Download speed is how fast data comes to you, while upload speed is how fast you send data out. Both matter depending on your activities.",
+              },
+              {
+                q: "Should I get a data plan with or without a cap?",
+                a: "Unlimited plans offer peace of mind if you stream a lot. Capped plans may work if your usage is moderate. Compare what's available in your area.",
+              },
+              {
+                q: "How do I know which internet service is right for me?",
+                a: "Consider available options in your area, your speed needs, budget, and contract terms. We can help you understand these options.",
+              },
+            ].map((item, index) => (
               <motion.div
-                key={tier.speed}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="card-elevated text-center group"
+                className="card-elevated p-4 sm:p-6"
               >
-                <div className="text-2xl sm:text-5xl font-bold text-gradient mb-0.5 sm:mb-1">{tier.speed}</div>
-                <div className="text-xs sm:text-base text-muted-foreground mb-2 sm:mb-4">{tier.label}</div>
-                <h3 className="text-base sm:text-xl font-bold text-foreground mb-1 sm:mb-2">{tier.description}</h3>
-                <p className="text-xs sm:text-sm text-muted-foreground">{tier.ideal}</p>
+                <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3">{item.q}</h3>
+                <p className="text-muted-foreground">{item.a}</p>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Installation Image Section */}
-      <section className="section-padding bg-background">
-        <div className="container-wide px-2 sm:px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <img
-                src={internetInstallation}
-                alt="Professional fiber installation"
-                className="rounded-2xl sm:rounded-3xl shadow-2xl w-full"
-              />
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-accent/10 text-accent text-xs sm:text-sm font-medium mb-3 sm:mb-4">
-                Professional Installation
-              </span>
-              <h2 className="text-2xl sm:text-4xl font-bold text-foreground mb-4 sm:mb-6">
-                Expert Setup, <span className="text-gradient">Zero Hassle</span>
-              </h2>
-              <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6">
-                Our certified technicians handle everything from running fiber to your home to 
-                optimizing your WiFi coverage. We don't leave until you're connected and satisfied.
-              </p>
-              <ul className="space-y-2 sm:space-y-4 mb-6 sm:mb-8">
-                {[
-                  "Free professional installation",
-                  "Same-day setup available",
-                  "Whole-home WiFi optimization",
-                  "Free router included",
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-muted-foreground">
-                    <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <Button variant="hero" asChild>
-                <a href="tel:8444498598">Call Now: (844) 449-8598</a>
-              </Button>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Work From Home Section */}
-      <section className="section-padding bg-card">
-        <div className="container-wide px-2 sm:px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="order-2 lg:order-1"
-            >
-              <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-medium mb-3 sm:mb-4">
-                Work From Home
-              </span>
-              <h2 className="text-2xl sm:text-4xl font-bold text-foreground mb-4 sm:mb-6">
-                Stay Productive, <span className="text-gradient">Anywhere</span>
-              </h2>
-              <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6">
-                Video calls, file uploads, cloud applications — our network handles it all without breaking a sweat.
-              </p>
-              <ul className="space-y-2 sm:space-y-4 mb-6 sm:mb-8">
-                {[
-                  "Crystal-clear video conferencing",
-                  "Fast file uploads and downloads",
-                  "Stable VPN connections",
-                  "Multiple devices, no slowdown",
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-muted-foreground">
-                    <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="order-1 lg:order-2"
-            >
-              <img
-                src={galleryOffice}
-                alt="Modern home office setup"
-                className="rounded-2xl sm:rounded-3xl shadow-2xl w-full"
-              />
-            </motion.div>
           </div>
         </div>
       </section>

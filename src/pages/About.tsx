@@ -61,19 +61,22 @@ export default function AboutPage() {
               viewport={{ once: true }}
             >
               <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-medium mb-3 sm:mb-4">
-                Our Mission
+                About Us
               </span>
               <h2 className="text-2xl sm:text-4xl font-bold text-foreground mb-4 sm:mb-6">
-                Empowering Your Connection
+                Independent Service Assistance
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6">
-                Net-soft Communications was founded in 2025 to assist, guide, and support individuals and businesses with cable, internet, and streaming services. We are not a provider, but a startup dedicated to helping you navigate your options and get the most from your connectivity—always independently, always transparently.
+                Net-soft Communications is an independent third-party service assistance provider offering general guidance related to internet, broadband, Wi-Fi, and cable TV services.
               </p>
-              <p className="text-xs sm:text-sm text-muted-foreground mb-6 sm:mb-8">
-                We charge a separate service fee for our assistance. We never request provider passwords or sensitive credentials, and we are not affiliated with or endorsed by any provider. All provider names are referenced descriptively only and include their respective trademarks (™ or ®).
+              <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6">
+                We assist users by providing informational support, helping them understand service options, and offering general guidance on common connectivity-related concerns.
+              </p>
+              <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">
+                We do not provide internet or cable services directly, and we do not represent or partner with any telecom, internet, or cable TV provider. Our focus is transparency, clarity, and responsible service assistance.
               </p>
               <Button variant="hero" asChild>
-                <Link to="/coverage">Get Assistance</Link>
+                <Link to="/contact">Contact Us</Link>
               </Button>
             </motion.div>
             

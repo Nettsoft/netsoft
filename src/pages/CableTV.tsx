@@ -53,10 +53,15 @@ const packages = [
 
 export default function CableTVPage() {
   return (
-    <PageLayout title="Cable TV Services" description="500+ HD and 4K channels for the whole family.">
-      {/* Channel Categories */}
+    <PageLayout title="Cable TV Services Guidance" description="Independent third-party guidance on cable TV and streaming service options.">
+      {/* Disclaimer Banner */}
+      <div className="w-full bg-accent/10 border-b border-accent text-accent text-center py-3 px-2 text-sm font-medium">
+        We provide informational guidance only. We are not a cable or streaming provider.
+      </div>
+
+      {/* Understanding Cable TV Options */}
       <section className="section-padding bg-background">
-        <div className="container-wide">
+        <div className="container-wide px-2 sm:px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -64,15 +69,49 @@ export default function CableTVPage() {
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-              Channel Categories
+              Cable TV Guidance
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
-              Something for <span className="text-gradient">Everyone</span>
+              Understand Cable TV <span className="text-gradient">Service Options</span>
             </h2>
+            <p className="text-lg text-muted-foreground">
+              Learn what's available in cable TV services and how to evaluate options that work for you.
+            </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {channels.map((channel, index) => (
+            {[
+              {
+                icon: Tv,
+                name: "Entertainment Channels",
+                description: "General entertainment, news, and lifestyle programming.",
+              },
+              {
+                icon: Film,
+                name: "Movies & Series",
+                description: "Understanding premium movie channels and on-demand content.",
+              },
+              {
+                icon: Trophy,
+                name: "Sports Programming",
+                description: "Evaluating sports packages and coverage options.",
+              },
+              {
+                icon: Baby,
+                name: "Family Content",
+                description: "Kids and family-friendly programming considerations.",
+              },
+              {
+                icon: Music,
+                name: "Music Channels",
+                description: "Music programming and audio options available.",
+              },
+              {
+                icon: Globe,
+                name: "International Options",
+                description: "International programming and language options.",
+              },
+            ].map((channel, index) => (
               <motion.div
                 key={channel.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -85,57 +124,16 @@ export default function CableTVPage() {
                   <channel.icon className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-2">{channel.name}</h3>
-                <p className="text-2xl font-bold text-gradient">{channel.count} Channels</p>
+                <p className="text-muted-foreground text-sm">{channel.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Living Room Image Section */}
-      <section className="section-padding bg-card">
-        <div className="container-wide">
-          <div className="flex flex-col-reverse gap-10 lg:grid lg:grid-cols-2 lg:gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="w-full"
-            >
-              <img
-                src={galleryLivingRoom}
-                alt="Modern living room entertainment"
-                className="rounded-2xl shadow-2xl w-full max-w-full h-auto object-cover"
-              />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="w-full"
-            >
-              <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
-                Premium Experience
-              </span>
-              <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold text-foreground mb-6">
-                Entertainment That <span className="text-gradient">Delivers</span>
-              </h2>
-              <p className="text-base xs:text-lg text-muted-foreground mb-8">
-                From live sports to blockbuster movies, kids shows to international programming — 
-                experience TV the way it should be: crystal clear, always available, and packed with choice.
-              </p>
-              <Button variant="hero" asChild className="w-full sm:w-auto">
-                <Link to="/coverage">View TV Packages</Link>
-              </Button>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features */}
+      {/* Common Cable TV Questions */}
       <section className="section-padding bg-secondary/30">
-        <div className="container-wide">
+        <div className="container-wide px-2 sm:px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -143,34 +141,52 @@ export default function CableTVPage() {
             className="text-center max-w-3xl mx-auto mb-12 xs:mb-16"
           >
             <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold text-foreground mb-6">
-              Features You'll <span className="text-gradient">Love</span>
+              Frequently Asked Questions About <span className="text-gradient">Cable TV</span>
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-            {features.map((feature, index) => (
+          <div className="max-w-3xl mx-auto space-y-4 sm:space-y-6">
+            {[
+              {
+                q: "What's the difference between cable TV and streaming?",
+                a: "Cable TV typically offers live channels and traditional programming, while streaming provides on-demand content. Some services now offer both.",
+              },
+              {
+                q: "How do I choose between different channel packages?",
+                a: "Consider what you watch most. Do you need sports? Movies? Kids content? Compare available packages in your area that fit your preferences.",
+              },
+              {
+                q: "What are typical channel counts and what do they include?",
+                a: "Basic packages may include 50-100 channels, while premium packages can include 300+. Higher counts typically add specialty and premium content.",
+              },
+              {
+                q: "What features should I look for?",
+                a: "Consider DVR capability, on-demand content, multi-room viewing, and mobile access. These features vary by service.",
+              },
+              {
+                q: "How do I evaluate the overall value?",
+                a: "Compare total cost, available channels for your interests, features, and customer service. What matters most depends on your needs.",
+              },
+            ].map((item, index) => (
               <motion.div
-                key={feature.title}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="card-elevated text-center flex flex-col h-full"
+                className="card-elevated p-4 sm:p-6"
               >
-                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                  <feature.icon className="w-7 h-7 sm:w-8 sm:h-8 text-primary-foreground" />
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3">{feature.title}</h3>
-                <p className="text-sm sm:text-base text-muted-foreground flex-1">{feature.description}</p>
+                <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3">{item.q}</h3>
+                <p className="text-muted-foreground">{item.a}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Packages */}
+      {/* Streaming Comparison */}
       <section className="section-padding bg-background">
-        <div className="container-wide">
+        <div className="container-wide px-2 sm:px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -178,42 +194,35 @@ export default function CableTVPage() {
             className="text-center max-w-3xl mx-auto mb-12 xs:mb-16"
           >
             <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold text-foreground mb-6">
-              Choose Your <span className="text-gradient">Package</span>
+              Understanding Your <span className="text-gradient">Options</span>
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-            {packages.map((pkg, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                title: "Traditional Cable",
+                description: "Live channels, scheduled programming, usually includes DVR.",
+              },
+              {
+                title: "Streaming Services",
+                description: "On-demand content, watch when you want, often subscription-based.",
+              },
+              {
+                title: "Hybrid Approaches",
+                description: "Combined cable and streaming options for comprehensive entertainment.",
+              },
+            ].map((option, index) => (
               <motion.div
-                key={pkg.name}
+                key={option.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`card-elevated flex flex-col h-full ${index === 2 ? "ring-2 ring-primary" : ""}`}
+                className="card-elevated p-6"
               >
-                {index === 2 && (
-                  <span className="inline-block px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-medium mb-4">
-                    Most Popular
-                  </span>
-                )}
-                <h3 className="text-lg sm:text-2xl font-bold text-foreground mb-2">{pkg.name}</h3>
-                <p className="text-3xl sm:text-4xl font-bold text-gradient mb-4 sm:mb-6">{pkg.channels}</p>
-                <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
-                  {pkg.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2 text-sm sm:text-base text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Button 
-                  variant={index === 2 ? "hero" : "outline"} 
-                  className="w-full mt-auto"
-                  asChild
-                >
-                  <a href="tel:8444498598">Call Now: (844) 449-8598</a>
-                </Button>
+                <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3">{option.title}</h3>
+                <p className="text-muted-foreground">{option.description}</p>
               </motion.div>
             ))}
           </div>

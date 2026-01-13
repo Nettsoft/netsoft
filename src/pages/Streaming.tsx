@@ -41,10 +41,15 @@ const benefits = [
 
 export default function StreamingPage() {
   return (
-    <PageLayout title="Streaming Services" description="All your favorite streaming platforms, bundled and optimized.">
-      {/* Hero Content */}
+    <PageLayout title="Streaming Services Guidance" description="Independent guidance on streaming and entertainment service options.">
+      {/* Disclaimer Banner */}
+      <div className="w-full bg-accent/10 border-b border-accent text-accent text-center py-3 px-2 text-sm font-medium">
+        We provide informational guidance only. We are not a streaming service provider.
+      </div>
+
+      {/* Understanding Streaming Options */}
       <section className="section-padding bg-background">
-        <div className="container-wide">
+        <div className="container-wide px-2 sm:px-4">
           <div className="flex flex-col-reverse gap-10 lg:grid lg:grid-cols-2 lg:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -53,30 +58,40 @@ export default function StreamingPage() {
               className="w-full"
             >
               <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                Stream Everything
+                Streaming Guidance
               </span>
               <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold text-foreground mb-6">
-                Your Favorite Apps, <span className="text-gradient">One Network</span>
+                Understand Streaming <span className="text-gradient">Options</span>
               </h2>
               <p className="text-base xs:text-lg text-muted-foreground mb-6">
-                Stream your favorite content without buffering or quality drops. 
-                Our network is optimized for all major streaming platforms.
+                Learn about different streaming services, what they offer, and how to evaluate which options work best for your viewing preferences and internet needs.
               </p>
 
-              {/* Streaming App Badges */}
+              {/* Common Streaming Services (Informational) */}
               <div className="flex flex-wrap gap-2 xs:gap-3 mb-8">
-                {streamingApps.map((app) => (
+                {[
+                  "Netflix™",
+                  "Disney+™",
+                  "Prime Video®",
+                  "HBO Max™",
+                  "Hulu®",
+                  "Others",
+                ].map((app) => (
                   <span
-                    key={app.name}
-                    className={`${app.color} text-white px-3 py-1.5 xs:px-4 xs:py-2 rounded-full text-xs xs:text-sm font-medium`}
+                    key={app}
+                    className="bg-card border border-border text-foreground px-3 py-1.5 xs:px-4 xs:py-2 rounded-full text-xs xs:text-sm font-medium"
                   >
-                    {app.name}
+                    {app}
                   </span>
                 ))}
               </div>
 
+              <p className="text-xs text-muted-foreground mb-4">
+                * Brand names are referenced for informational purposes only. All trademarks belong to their respective owners.
+              </p>
+
               <Button variant="hero" asChild className="w-full sm:w-auto">
-                <a href="tel:8444498598">Call Now: (844) 449-8598</a>
+                <a href="tel:8444498598">Get Guidance</a>
               </Button>
             </motion.div>
 
@@ -96,9 +111,9 @@ export default function StreamingPage() {
         </div>
       </section>
 
-      {/* Benefits Grid */}
+      {/* Streaming Considerations */}
       <section className="section-padding bg-secondary/30">
-        <div className="container-wide">
+        <div className="container-wide px-2 sm:px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -106,12 +121,33 @@ export default function StreamingPage() {
             className="text-center max-w-3xl mx-auto mb-12 xs:mb-16"
           >
             <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold text-foreground mb-6">
-              Built for <span className="text-gradient">Streaming</span>
+              Key Streaming <span className="text-gradient">Considerations</span>
             </h2>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {benefits.map((benefit, index) => (
+            {[
+              {
+                icon: Wifi,
+                title: "Internet Speed Needs",
+                description: "Understanding bandwidth requirements for different quality levels.",
+              },
+              {
+                icon: Tv,
+                title: "Device Compatibility",
+                description: "Which services work with your TV, phone, and other devices.",
+              },
+              {
+                icon: Smartphone,
+                title: "Simultaneous Streams",
+                description: "How many devices can stream at once with different services.",
+              },
+              {
+                icon: Zap,
+                title: "Content Libraries",
+                description: "What type of content each service offers and how to choose.",
+              },
+            ].map((benefit, index) => (
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -131,87 +167,101 @@ export default function StreamingPage() {
         </div>
       </section>
 
-      {/* Smart Home Section */}
+      {/* Internet Speed for Streaming */}
       <section className="section-padding bg-background">
-        <div className="container-wide">
-          <div className="flex flex-col gap-10 lg:grid lg:grid-cols-2 lg:gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="w-full order-2 lg:order-1"
-            >
-              <img
-                src={gallerySmartHome}
-                alt="Smart home entertainment"
-                className="rounded-2xl shadow-2xl w-full max-w-full h-auto object-cover"
-              />
-            </motion.div>
+        <div className="container-wide px-2 sm:px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center max-w-3xl mx-auto mb-12 xs:mb-16"
+          >
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold text-foreground mb-6">
+              Understanding Streaming <span className="text-gradient">Bandwidth</span>
+            </h2>
+          </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="w-full order-1 lg:order-2"
-            >
-              <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
-                Connected Living
-              </span>
-              <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold text-foreground mb-6">
-                Smart Home <span className="text-gradient">Compatible</span>
-              </h2>
-              <p className="text-base xs:text-lg text-muted-foreground mb-6">
-                Control your entertainment with voice commands. Our network supports 
-                all smart home ecosystems for a truly connected experience.
-              </p>
-              <ul className="space-y-3 xs:space-y-4 mb-6 xs:mb-8">
-                {[
-                  "Works with Alexa, Google Home, and Siri",
-                  "Smart speakers and displays supported",
-                  "Whole-home audio streaming",
-                  "Automatic quality optimization",
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-2 xs:gap-3 text-sm xs:text-base text-muted-foreground">
-                    <Play className="w-4 h-4 xs:w-5 xs:h-5 text-primary" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                type: "HD Streaming",
+                speed: "5-10 Mbps",
+                description: "Good for streaming a single HD video on one device.",
+              },
+              {
+                type: "4K Streaming",
+                speed: "25 Mbps",
+                description: "Recommended for one 4K stream without interruptions.",
+              },
+              {
+                type: "Multiple Streams",
+                speed: "100+ Mbps",
+                description: "For households streaming on multiple devices simultaneously.",
+              },
+            ].map((tier, index) => (
+              <motion.div
+                key={tier.type}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="card-elevated p-6 text-center"
+              >
+                <h3 className="text-lg font-bold text-foreground mb-2">{tier.type}</h3>
+                <p className="text-2xl font-bold text-gradient mb-3">{tier.speed}</p>
+                <p className="text-sm text-muted-foreground">{tier.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Bandwidth Calculator CTA */}
-      <section className="py-12 xs:py-16 bg-gradient-to-r from-primary to-accent">
-        <div className="container-wide text-center">
+      {/* FAQ Section */}
+      <section className="section-padding bg-secondary/30">
+        <div className="container-wide px-2 sm:px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            className="text-center max-w-3xl mx-auto mb-12"
           >
-            <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold text-primary-foreground mb-4">
-              How Much Speed Do You Need?
+            <h2 className="text-2xl sm:text-4xl font-bold text-foreground mb-4">
+              Streaming <span className="text-gradient">Questions</span>
             </h2>
-            <p className="text-primary-foreground/80 mb-6 xs:mb-8 max-w-2xl mx-auto text-sm xs:text-base">
-              With 4K streaming requiring 25 Mbps per stream, households with multiple devices 
-              need a robust connection. Our plans scale with your needs.
-            </p>
-            <div className="flex flex-col xs:flex-row flex-wrap justify-center gap-3 xs:gap-4">
-              <div className="bg-primary-foreground/20 backdrop-blur-sm rounded-xl px-4 xs:px-6 py-3 xs:py-4 min-w-[120px]">
-                <p className="text-primary-foreground/80 text-xs xs:text-sm">HD Streaming</p>
-                <p className="text-lg xs:text-2xl font-bold text-primary-foreground">5 Mbps</p>
-              </div>
-              <div className="bg-primary-foreground/20 backdrop-blur-sm rounded-xl px-4 xs:px-6 py-3 xs:py-4 min-w-[120px]">
-                <p className="text-primary-foreground/80 text-xs xs:text-sm">4K Streaming</p>
-                <p className="text-lg xs:text-2xl font-bold text-primary-foreground">25 Mbps</p>
-              </div>
-              <div className="bg-primary-foreground/20 backdrop-blur-sm rounded-xl px-4 xs:px-6 py-3 xs:py-4 min-w-[120px]">
-                <p className="text-primary-foreground/80 text-xs xs:text-sm">Gaming + 4K</p>
-                <p className="text-lg xs:text-2xl font-bold text-primary-foreground">100+ Mbps</p>
-              </div>
-            </div>
           </motion.div>
+
+          <div className="max-w-3xl mx-auto space-y-4 sm:space-y-6">
+            {[
+              {
+                q: "How much internet do I need for streaming?",
+                a: "It depends on quality and how many streams you want simultaneously. HD needs 5 Mbps, 4K needs 25 Mbps per stream.",
+              },
+              {
+                q: "Should I get a bundled or separate streaming services?",
+                a: "Compare costs and content. Some bundled options save money, while separate services give more choice.",
+              },
+              {
+                q: "Can I stream on multiple devices at the same time?",
+                a: "Most services allow simultaneous streams, but limits vary. Check each service's specifications.",
+              },
+              {
+                q: "What affects streaming quality?",
+                a: "Internet speed, network congestion, device capabilities, and service quality all impact your streaming experience.",
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="card-elevated p-4 sm:p-6"
+              >
+                <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3">{item.q}</h3>
+                <p className="text-muted-foreground text-sm sm:text-base">{item.a}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

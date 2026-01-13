@@ -14,11 +14,10 @@ export default function FinalCTASection() {
           className="max-w-4xl mx-auto text-center"
         >
           <h2 className="text-2xl sm:text-4xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6">
-            Your Connection{' '}
-            <span className="text-gradient">Starts Here</span>
+            Get Independent Service Guidance
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-10 max-w-2xl mx-auto">
-            Ready to experience reliable, high-speed connectivity? Check availability in your area and get started with Net-soft Communications today.
+            Ready to speak with a third-party internet advisor? Contact Net-soft Communications for independent, transparent guidance on cable, internet, and streaming services.
           </p>
 
           {/* CTA Buttons */}
@@ -26,7 +25,7 @@ export default function FinalCTASection() {
             <Button variant="hero" size="xl" asChild>
               <a href="tel:8444498598">
                 <Phone className="w-5 h-5" />
-                Call Now: (844) 449-8598
+                Talk to an Advisor
               </a>
             </Button>
             <Button variant="hero-outline" size="xl" asChild>
@@ -37,20 +36,11 @@ export default function FinalCTASection() {
             </Button>
           </div>
 
-          {/* Trust Indicators */}
-          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-8 text-xs sm:text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-accent" />
-              No annual contract required
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-accent" />
-              Free professional installation
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-accent" />
-              30-day money-back guarantee
-            </div>
+          {/* Compliance Statement */}
+          <div className="text-xs sm:text-sm text-muted-foreground max-w-2xl mx-auto">
+            <p className="font-semibold mb-2">
+              Net-soft Communications is an independent third-party service assistance provider. We are not affiliated with, authorized by, or endorsed by any internet, cable, or telecom service provider.
+            </p>
           </div>
         </motion.div>
       </div>

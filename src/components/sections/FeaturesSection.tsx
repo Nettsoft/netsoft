@@ -55,10 +55,10 @@ export default function FeaturesSection() {
             How We Help
           </span>
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
-            Independent Guidance, <span className="text-gradient">No Sales. No Affiliation.</span>
+            Independent Guidance, <span className="text-gradient">Always Transparent</span>
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground">
-            Net-soft Communications is here to assist, guide, and support you with cable, internet, and streaming&mdash;always as a third party, never as a provider.
+            Net-soft Communications provides independent guidance and informational support with cable, internet, and streaming—never as a service provider, always as a third party.
           </p>
         </motion.div>
 

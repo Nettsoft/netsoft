@@ -37,13 +37,13 @@ export default function HeroSection() {
 
             {/* Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              <span className="text-foreground">Independent. Helpful.</span>
+              <span className="text-foreground">Independent Internet & Cable</span>
               <br className="hidden sm:block" />
-              <span className="text-gradient">Here for You.</span>
+              <span className="text-gradient">Service Assistance</span>
             </h1>
 
             <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-lg">
-              Net-soft Communications is a third-party assistance platform for cable, internet, and streaming. We guide, support, and facilitate your experience&mdash;never selling plans, never affiliated with providers.
+              Get general guidance and informational support related to internet, broadband, Wi-Fi, and cable TV services from an independent third-party assistance provider.
             </p>
 
             {/* CTA Buttons */}
@@ -51,15 +51,20 @@ export default function HeroSection() {
               <Button variant="hero" size="xl" asChild>
                 <a href="tel:8444498598">
                   <Phone className="w-5 h-5" />
-                  Call Now: (844) 449-8598
+                  Talk to a Third-Party Internet Advisor
                 </a>
               </Button>
               <Button variant="hero-outline" size="xl" asChild>
                 <a href="tel:8444498598">
                   <Phone className="w-5 h-5" />
-                  Call Now
+                  Call for Independent Service Guidance
                 </a>
               </Button>
+            </div>
+
+            {/* Micro-text */}
+            <div className="text-xs text-muted-foreground mb-8">
+              Not an ISP. No brand affiliation.
             </div>
 
             {/* Quick Stats */}
