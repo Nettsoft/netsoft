@@ -39,16 +39,15 @@ const CallNowPopup = () => {
           </div>
 
           {/* Heading */}
-          <h3 className="text-2xl font-bold text-gray-800 mb-2">Call Now</h3>
+          <h3 className="text-2xl font-bold text-gray-800 mb-3">Internet or Cable Not Working?</h3>
 
           {/* Description Text */}
           <p className="text-gray-600 mb-6 text-sm">
-            Get in touch with our team today. Call us now for special offers and assistance.
+            Get instant help for slow internet, outages, setup issues, or cable problems.
           </p>
 
           {/* Phone Number Display */}
           <div className="mb-6">
-            <p className="text-gray-500 text-xs mb-2">Our Phone Number</p>
             <p className="text-3xl font-bold text-blue-600">(844) 449-8598</p>
           </div>
 
@@ -58,15 +57,20 @@ const CallNowPopup = () => {
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
           >
             <Phone size={20} />
-            Call Now
+            CALL SUPPORT NOW
           </Button>
 
-          {/* Optional: Close Button */}
+          {/* Trust Line */}
+          <p className="text-gray-500 text-xs mt-4 font-medium">
+            Quick assistance • No forms • Talk to a real agent
+          </p>
+
+          {/* Close Button */}
           <button
             onClick={() => setIsOpen(false)}
-            className="w-full mt-3 text-gray-600 hover:text-gray-800 font-medium transition-colors"
+            className="w-full mt-3 text-gray-600 hover:text-gray-800 font-medium transition-colors text-sm"
           >
-            Maybe Later
+            Close
           </button>
         </div>
       </div>
