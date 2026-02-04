@@ -3,11 +3,15 @@ import { X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const CallNowPopup = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Show popup when component mounts (website opens/refreshes)
-    setIsOpen(true);
+    // Show popup after 5 seconds when website opens/refreshes
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+    }, 5000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   if (!isOpen) return null;
