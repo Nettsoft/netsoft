@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
 import StickyCallButton from "@/components/StickyCallButton";
 import Chatbot from "@/components/Chatbot";
+import CallNowPopup from "@/components/CallNowPopup";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Internet from "./pages/Internet";
@@ -29,6 +30,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <CallNowPopup />
         <StickyCallButton />
         <Chatbot />
         <Routes>
